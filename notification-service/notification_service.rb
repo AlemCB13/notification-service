@@ -1,4 +1,5 @@
 require 'mail'
+require 'sinatra'
 
 # Configuración de Mail para enviar correos
 Mail.defaults do
@@ -25,3 +26,12 @@ class NotificationService
     puts "Correo enviado a #{recipient} con el asunto: #{subject}"
   end
 end
+
+post '/send_email' do
+    data = JSON.parse(request.body.read)
+    recipient = data['recipient']
+    subject = data['subject']
+    body = data['body']
+  
+    NotificationService.send_email(recipient, subject, body)
+  end
