@@ -1,0 +1,23 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "ruby",
+            "request": "launch",
+            "name": "Run current file",
+            "program": "${file}"
+        },
+        {
+            "type": "ruby",
+            "request": "launch",
+            "name": "Run notification_service.rb",
+            "program": "${workspaceFolder}/notification_service.rb"
+        },
+        {
+            "type": "ruby",
+            "request": "launch",
+            "name": "Run test",
+            "program": "${workspaceFolder}/test/test_notification_service.rb" 
+        }
+    ]
+}
