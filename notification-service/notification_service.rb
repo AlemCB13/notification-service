@@ -1,13 +1,16 @@
 require 'mail'
 require 'sinatra'
 
+set :bind,'0.0.0.0'
+set :port, 4567
+
 # Configuración de Mail para enviar correos
 Mail.defaults do
   delivery_method :smtp, {
     address: 'smtp.gmail.com',
     port: 587,
     user_name: 'revelobladimir2@gmail.com',
-    password: 'fbne kzyn bydl yrtq',
+    password: 'indx neko pkcn tgpj',
     authentication: 'plain',
     enable_starttls_auto: true
   }
