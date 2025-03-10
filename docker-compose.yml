@@ -12,8 +12,3 @@ services:
       - SMTP_USER=revelobladimir2@gmail.com
       - SMTP_PASSWORD=indx neko pkcn tgpj
     restart: always
-    networks:
-      - app-network
-networks:
-  app-network:
-    driver: bridge
